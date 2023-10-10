@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fast food</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+    
+    <img id="mohamed1" src="https://img.cuisineaz.com/680x357/2016/05/26/i101924-recettes-avec-une-escalope-de-poulet.jpg" alt="">
+    <img id="mohamed2" src="" alt="">
+   <h1 id="fast food">fast food</h1>
+   <button  id="b1"onclick="afficherPrice(8.99)">first image</button>  <p id="price"></p>
+   <button  id="b2"onclick="afficherPrice(9.5)">second image</button>  <p id="price"></p>
+   <button  id="b3"onclick="afficherPrice(8)">third image</button>  <p id="price"></p>
+   <button  id="b4"onclick="afficherPrice(10)">fourth image</button> <p id="price"></p>
+   <script>
+var array=["https://img.cuisineaz.com/680x357/2016/05/26/i101924-recettes-avec-une-escalope-de-poulet.jpg","https://livrina.com/assets/img/items/1646658461rrHgvUhHXd.jpg"
+,"https://www.royal-pizza-gretz.fr/assets/images/product/escalope.png","https://sf1.viepratique.fr/wp-content/uploads/sites/2/2014/08/escalope.jpg",]
+ // Fonction pour afficher le prix lorsque l'image est cliquée
+ function afficherPrice(price) {
+            document.getElementById("price").textContent = "Price : " + price + "€";
+        }
+
+function changeImage(array,pos){
+    console.log(array[pos]);
+$('#mohamed1').attr("src",array[pos])
+}
+$("#b1").on("click",function(){
+    changeImage(array,0)
+})
+$("#b2").on("click",function(){
+    changeImage(array,1)
+})
+$("#b3").on("click",function(){
+    changeImage(array,2)
+})
+$("#b4").on("click",function(){
+    changeImage(array,3)
+})
+
+   
+
+     
+   </script>
+    <buttonclic></button>
+</body>
+</html> 
